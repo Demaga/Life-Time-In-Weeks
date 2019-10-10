@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>LifeTimeInWeeks</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <div class="top-menu">
+      <h2 class="logo"><b><a href="index.html" class="logo">LifeTimeInWeeks<a></b></h2>
+      <input type="checkbox" id="chk">
+      <label for="chk" class="show-menu-btn">
+        <i class="fas fa-ellipsis-h"></i>
+      </label>
+      <ul class="menu">
+        <a href="index.html">Главная</a>
+        <a href="famous.html">Знаменитости</a>
+        <a href="articles.html">Статьи</a>
+        <a href="#">О нас</a>
+        <button onclick="document.getElementById('id01').style.display='block'">Войти</button>
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label>
+      </ul>
+   </div>
+
+    <div class='life' style="text-align: center">
+        <h1 style="margin-left: 15px;" ><br>Знаменитости<br></br></h1>
+        <div class='blank'></div>
+        <div class="card">
+            <img src="gallery/einsteinVienna1921.jpg" alt="Albert Einstein" class="thumbnail">
+            <div class="card-container">
+                <h4><b>Альберт Эйнштейн</b></h4>
+                <p>Теоретический физик</p>
+                </div>
+            </div>
+        <div class="card">
+            <img src="gallery/einsteinVienna1921.jpg" alt="Albert Einstein" class="thumbnail">
+            <div class="card-container">
+                <h4><b>Альберт Эйнштейн</b></h4>
+                <p>Теоретический физик</p>
+                </div>
+            </div>
+        <div class="card">
+            <img src="gallery/einsteinVienna1921.jpg" alt="Albert Einstein" class="thumbnail">
+            <div class="card-container">
+                <h4><b>Альберт Эйнштейн</b></h4>
+                <p>Теоретический физик</p>
+                </div>
+            </div>
+        <div class="hidden_table">
+            <p onclick="display_table()" style="text-decoration: underlined; cursor: pointer;">Показать весь список</p>
+            <table id="displaytable" class="displaytable">
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Профессия</th>
+                        <th>Возраст</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Альберт Эйнштейн</td>
+                        <td>Физик-теоретик</td>
+                        <td>76</td>
+                    </tr>
+                    <tr>
+                        <td>Джонни Депп</td>
+                        <td>Актёр</td>
+                        <td>56</td>
+                    </tr>
+                    <tr>
+                        <td>Илон Маск</td>
+                        <td>Инженер, предприниматель</td>
+                        <td>48</td>
+                    </tr>
+                </tbody>
+                </tr>
+            </table>
+        </div>
+
+        <div class='blank'>
+            <p style="padding: 5px;"><b><br>Made with ❤️ by Bogdan Kholodenko</b></p>
+            <a href="form.html" style="text-decoration: underline; cursor: pointer; padding-bottom: 15px;">Contact form</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
