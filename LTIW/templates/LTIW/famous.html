@@ -1,0 +1,60 @@
+{% extends 'LTIW/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class='life' style="text-align: center; margin-bottom: 105px;">
+        <h1 style="margin-left: 15px;" ><br>Знаменитости<br></br></h1>
+        <div class='blank'></div>
+        <div class="card">
+            <img src="{% static 'gallery/einsteinVienna1921.jpg' %}" alt="Albert Einstein" class="thumbnail">
+            <div class="card-container">
+                <h4><b>Альберт Эйнштейн</b></h4>
+                <p>Теоретический физик</p>
+                </div>
+            </a>
+            </div>
+        <div class="card">
+            <img src="{% static 'gallery/johnydepp.jpg' %}" alt="Johny Depp" class="thumbnail">
+            <div class="card-container">
+                <h4><b>Джонни Депп</b></h4>
+                <p>Актёр</p>
+                </div>
+            </a>
+            </div>
+        <div class="card">
+            <img src="{% static 'gallery/elonmusk.jpg' %}" alt="Elon Musk" class="thumbnail">
+            <div class="card-container">
+                <h4><b>Илон Маск</b></h4>
+                <p>Инженер, предприниматель</p>
+                </div>
+            </a>
+            </div>
+    </div>
+
+   <!-- The Modal -->
+    <div id="id01" class="modal">
+
+    <!-- Modal Content -->
+    <form class="modal-content animate" id="form_1" action="/admin.html">
+    
+        <div class="container" id="logincont">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <span for="uname" class="uname"><b>Username</b></span>
+        <input class="input_uname" type="text" id="username" placeholder="Enter Username" name="uname" required>
+
+        <span for="psw" class="password"><b>Password</b></span>
+        <input type="password" placeholder="Enter Password" id="password" name="psw" required>
+
+        <input type="button" class="login" value="Login" onclick="login()">
+        <label>
+            <input type="checkbox" class="remember" checked="checked" name="remember"> Remember me
+        </label>
+        </div>
+
+        <div class="container"  style="background-color:#f1f1f1; height: 55px;">
+        <p class="psw">Forgot <a href="#">password?</a></p>
+        </div>
+    </form>
+    </div>
+
+{% endblock %}

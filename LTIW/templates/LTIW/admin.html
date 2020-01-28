@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>LifeTimeInWeeks</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <div class="top-menu">
+      <h2 class="logo"><b><a href="index.html" class="logo">LifeTimeInWeeks<a></b></h2>
+      <input type="checkbox" id="chk">
+      <label for="chk" class="show-menu-btn">
+        <i class="fas fa-ellipsis-h"></i>
+      </label>
+      <ul class="menu">
+        <a href="pages/index.html">Главная</a>
+        <a href="pages/famous.html">Знаменитости</a>
+        <a href="pages/articles.html">Статьи</a>
+        <a href="pages/create.html">О нас</a>
+        <button onclick="document.getElementById('id01').style.display='block'">Войти</button>
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label>
+      </ul>
+      
+   </div>
+   <h1 style="color: blue; margin-left: 45%;">ADMIN PAGE</h1>
+
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+
+    <!-- Modal Content -->
+    <form class="modal-content animate" id="form_1" action="/admin.html">
+    
+        <div class="container" id="logincont">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <span for="uname" class="uname"><b>Username</b></span>
+        <input class="input_uname" type="text" id="username" placeholder="Enter Username" name="uname" required>
+
+        <span for="psw" class="password"><b>Password</b></span>
+        <input type="password" placeholder="Enter Password" id="password" name="psw" required>
+
+        <input type="button" class="login" value="Login" onclick="login()">
+        <label>
+            <input type="checkbox" class="remember" checked="checked" name="remember"> Remember me
+        </label>
+        </div>
+
+        <div class="container"  style="background-color:#f1f1f1; height: 55px;">
+        <p class="psw">Forgot <a href="#">password?</a></p>
+        </div>
+    </form>
+    </div>
+
+  </body>
+</html>

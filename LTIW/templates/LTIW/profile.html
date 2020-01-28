@@ -1,0 +1,32 @@
+{% extends 'LTIW/base.html' %}
+{% load static %}
+
+{% block content %}
+	{% if user.is_authenticated %}
+		{% if user.userlife.lifetime %}
+			<div class='lifeoftitle'>
+		        <button id="addevent"><a href="{% url 'event-create' %}">Добавить событие</a></button>
+    <h1 class="lifeof">Ваша Жизнь</h1>
+    </div>
+			<div class="life"></div>
+			<script type="text/javascript" src='{% static "js/loaduser.js" %}'></script>
+		{% else %}
+		<div class="block" id='countryholder'>    
+		    <div class="country">
+		        <form class="selectform" method="POST">
+		        	{% csrf_token %}
+		        	{{ lifeform }}
+		        	<input type="submit" name="">
+		        </form>
+		    </div>
+		    </div>
+
+
+		    <div class="life"></div>
+
+		    <script type="text/javascript" src="{% static 'js/create.js' %}"></script>
+		{% endif %}
+	{% else %}
+		<h4>error</h4>
+	{% endif %}
+{% endblock %}

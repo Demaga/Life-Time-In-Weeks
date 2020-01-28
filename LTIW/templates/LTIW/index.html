@@ -1,0 +1,39 @@
+{% extends 'LTIW/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+    <div class='lifeoftitle'>
+    <h1 class="lifeof">Жизнь Альберта Эйнштейна</h1>
+    </div>
+    <div>
+    <div class="stages">
+      <div class="tooyoung"><div class="rotate"><span>Юность</span></div></div><div class="young"><div class="rotate"><span>Молодость</span></div></div><div class="mature"><div class="rotate"><span>Зрелость</span></div></div><div class="old"><div class="rotate"><span>Старость</span></div></div>
+    </div>
+    <div class='life'>
+
+    </div>
+    </div> 
+    <div class="explain">
+        <h3>Не понимаете, что всё это значит? Прочтите <a href="https://waitbutwhy.com/2014/05/life-weeks.html">гайд</a></h3>
+    </div>
+
+
+    <div class="comments" id="comments">
+        <h2>Комментарии<br></h2>
+        {% for comment in comments %}
+            <div class="comment">
+                <h3>{{ comment.name }}</h3>
+                <h4>{{ comment.text }}</h4>
+            </div>
+        {% endfor %}
+        <form method="POST" class="commentsform">
+            {% csrf_token %}
+            {{ commentsform }}
+            <input type="submit" value="Оставить комментарий">
+        </form>
+    </div>
+
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+{% endblock %} 

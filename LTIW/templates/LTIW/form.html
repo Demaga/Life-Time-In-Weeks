@@ -1,0 +1,55 @@
+{% extends 'LTIW/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <form action="{% url 'home' %}">
+
+            <label for="name">Имя Фамилия</label>
+            <input type="text" id="name" name="name" placeholder="Ваше имя..">
+
+            <label for="country">Страна</label>
+                <select id="country" name="country">
+                <option     value="ukraine">Украина</option>
+                <option value="russia">Россия</option>
+                <option value="belorus">Беларусь</option>
+            </select>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Введите Ваш E-mail..">
+            </select>
+
+            <label for="subject">Текст</label>
+            <textarea id="subject" name="subject" placeholder="Напишите что-нибудь.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+
+    <!-- Modal Content -->
+    <form class="modal-content animate" id="form_1" action="/admin.html">
+    
+        <div class="container" id="logincont">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <span for="uname" class="uname"><b>Username</b></span>
+        <input class="input_uname" type="text" id="username" placeholder="Enter Username" name="uname" required>
+
+        <span for="psw" class="password"><b>Password</b></span>
+        <input type="password" placeholder="Enter Password" id="password" name="psw" required>
+
+        <input type="button" class="login" value="Login" onclick="login()">
+        <label>
+            <input type="checkbox" class="remember" checked="checked" name="remember"> Remember me
+        </label>
+        </div>
+
+        <div class="container"  style="background-color:#f1f1f1; height: 55px;">
+        <p class="psw">Forgot <a href="#">password?</a></p>
+        </div>
+    </form>
+    </div>
+
+{% endblock %}

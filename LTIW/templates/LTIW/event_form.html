@@ -1,0 +1,17 @@
+{% extends 'LTIW/base.html' %}
+{% load static %}
+
+{% block content %}
+	<div>
+		<form method="POST" id="addeventform">
+			{% csrf_token %}
+			<fieldset>
+				<legend>Событие</legend>
+				{{ form }}				
+			<div>
+				<button type="submit">Добавить</button>
+			</div>
+			</fieldset>
+		</form>
+	</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'LTIW/base.html' %}
+{% load static %}
+
+{% block content %}
+<form class="signupform" method="POST">
+	<h1 class="mt-5">Регистрация</h1>
+	{% csrf_token %}
+	{{ regform }}
+	<input type="submit" value='Создать аккаунт'>
+</form>
+{% endblock %}

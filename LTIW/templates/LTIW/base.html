@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>LifeTimeInWeeks</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'gallery/favicon.ico' %}"/>
+  </head>
+  <body>
+
+    <div class="top-menu">
+      <a href="{% url 'home' %}"><h1 id="logo">LifeTime<br>InWeeks</h1></a>
+      <nav id="navbar">
+        {% if user.is_authenticated %}
+        <ul>
+          <li><a href="{% url 'home' %}">Главная</a></li>
+          <li><a href="{% url 'famous' %}">Знаменитости</a></li>
+          <li><a href="{% url 'profile' %}">Мой профиль</a></li>
+        </ul>
+        {% endif %}
+      </nav>
+      
+    </div>
+      {% block content %}
+      {% endblock %}
+    
+           
+    <p style="padding: 5px; text-align: center;"><b><br>Made with ❤️ by Bogdan Kholodenko</b><a href="{% url 'contactform' %}" style="display: block; text-align: center; text-decoration: underline; cursor: pointer; padding-bottom: 15px;">Contact form</a></p>
+    
+
+
+	<div class="popup overlay" id="popup1">
+		<div class="content" id='popup-text'>
+			<h2>Thank to pop me out of that button, but now i'm done so you can close this window.</h2>
+		</div>
+	</div>
+    <a class="close-popup"></a>
+
+    
+
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+
+    <!-- Modal Content -->
+    <form class="modal-content animate" method="POST" id="form_1">
+        <div class="container" id="logincont">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        <h3>Вход (<a href="{% url 'signup' %}">Ещё не зарегистрированы?</a>)</h3>
+        {{form}}
+        {% csrf_token %}
+
+        <input type="submit" class="login" value="Login">
+        <label>
+            <input type="checkbox" class="remember" checked="checked" name="remember"> Запомнить меня
+        </label>
+        </div>
+
+        <div class="container"  style="background-color:#f1f1f1; height: 55px;">
+        <p class="psw">Забыли <a href="#">пароль?</a></p>
+        </div>
+    </form>
+    </div>
+  </body>
+</html>
