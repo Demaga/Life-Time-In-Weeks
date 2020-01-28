@@ -1,0 +1,843 @@
+/*
+COLORS: 
+blue: #3498db
+pink: #fd79a8
+violet: #8e44ad
+different blue: #039be5
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a #logo {
+  padding-top: 15px;
+  color: #fd79a8!important;
+}
+
+.life{
+    text-align: center;
+    color: #3498db;
+    height: 100%;
+    width: calc(100% - 200px);
+    position: absolute;
+    left: 200px;
+    margin: 0 auto;
+}
+
+.top-menu{
+  height: 100vh;
+  position: fixed;
+  width: 200px;
+  margin-top: 0px;
+  float: left;
+  background: #8e44ad;
+  padding: 0 20px;
+  color: #fd79a8;
+}
+
+#navbar {
+  margin-top: 10px;
+}
+
+#navbar ul {
+  list-style: none;
+}
+
+#navbar ul li a{
+  color: #fd79a8;
+}
+
+#navbar a {
+
+}
+
+.show-menu-btn,.hide-menu-btn{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.show-menu-btn{
+  float: right;
+}
+.show-menu-btn i{
+  line-height: 100px;
+}
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+  color: #fd79a8;
+}
+
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+.year {
+    height: 15px;
+    margin-bottom: 5px;
+}
+
+.years {
+    height: 15px;
+    margin-bottom: 10px;
+}
+
+.years span {
+  position: absolute;
+  display: block;
+  left: 10px;
+  text-align: right;
+}
+
+.week {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border:1px solid #039be5;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px){
+  .years {
+    width: 481px;
+    margin: 0 auto!important;
+    display: block;
+    margin-bottom: 45px!important;
+  }
+  .week:nth-child(2){
+    margin-left: 3px!important;
+  }
+  .years span {
+    display: block;
+  }
+  .life {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .lifeoftitle {
+    width: 50%!important;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1047px){
+
+    .years {
+        margin-bottom: 25px;
+    }
+
+    .year {
+        margin-bottom: 25px;
+    }
+
+}
+
+@media screen and (max-width: 535px){
+   .lifeoftitle {
+      width: 80%!important;
+    }
+
+    .years {
+        margin-bottom: 50px;
+    }
+
+    .year {
+        margin-bottom: 50px;
+    }
+
+}
+
+.green {
+    background-color:rgb(20, 235, 0);
+}
+
+.default {
+    background-color:#fff;
+}
+
+.darkgrey {
+  background-color: rgb(91, 93, 97);
+}
+
+.grey {
+    background-color:rgb(160, 160, 160);
+    background-color: white;
+}
+
+.born{
+    background-color: #fd79a8;
+}
+
+.blue{
+    background-color: #3498db;
+}
+
+.death{
+    background-color: #333;
+}
+
+.blank {
+    height: 50px;
+    background-color: #fafafa;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left: 25px;
+  width: 300px;
+  height: 385px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+/* Add some padding inside the card container */
+.card-container {
+  padding: 2px;
+  margin-top: 5px;
+  text-align: center;
+  vertical-align: center;
+}
+
+img.thumbnail {
+  max-width:300px;
+  max-height:325px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bordered form */
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #fd79a8;
+  border: 3px solid #fd79a8;
+  color: white;
+  height: 35px;
+  cursor: pointer;
+  width: 97px;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+  color: #fd79a8;
+  background-color: #8e44ad;
+  transition: 0.4s;
+}
+
+.login{
+    width: 100px;
+    height: 40px;
+    background-color: #06D85F;
+    color: white;
+    border: 1px #45a049;
+    margin-top: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 0 1px rgba(0,0,0,0.5);
+    }
+
+.login:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Add padding to containers */
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-top: 5px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    display: block;
+    float: right;
+    margin-right: 15px;
+    padding-bottom: 130px;
+}
+
+span.password{
+    display: inline-block;
+    padding-left: 3px;
+}
+
+.remember{
+    margin-left: 15px;
+}
+
+span.uname{
+    display: inline-block;
+    padding-left: 3px;
+}
+
+#logo2 {
+  display: none;
+  margin-top: -8px;
+  width: 100px;
+  height: 100px;
+  margin-right: 0px;
+}
+#logo2 a h2 {
+  line-height: 15px;
+}
+
+@media screen and (max-width: 650px){
+  #logo2 {
+    display: inline-block;
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 350px;
+}
+
+/* The Close Button */
+.close {
+  display: inline-block;
+  margin-left: 95%;
+  color: #000;
+  font-size: 31px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+.hidden_table {
+    margin-top: 35px;
+    height: 400px;
+}
+
+table.displaytable {
+    display: none;
+    margin-top: 35px;
+    border: 2px solid #039BE5;
+    background-color: rgb(255, 255, 255);
+    width: 525px;
+}
+
+table.displaytable td, table.displaytable th {
+    border: 1px solid #06BEFF;
+    padding: 5px 8px;
+    width: 175px;
+}
+
+table.displaytable thead {
+    background: #2285FF;
+}
+
+table.displaytable thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], input[type=email], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit], .createbtn {
+  background-color: #4CAF50!important;
+  color: white!important;
+  border: none!important;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 4px!important;
+  cursor: pointer!important;
+  width: 175px!important;
+  height: 35px!important;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover, .createbtn {
+  background-color: #45a049!important;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.blank{
+    height: 75px;
+}
+
+.sidemenu li{
+    margin-bottom: 5px;
+    padding: 0 px;
+}
+
+li a{
+    margin: 0px; 
+    display: block; 
+    width: 100%; 
+    height: 100%;
+    text-decoration: none;
+    color: #039be5;
+}
+
+.home-popular-article {
+    width: 25%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    position: relative;
+}
+
+li a:hover{
+    background:#06BEFF;
+    color: #000;
+}
+
+.country {
+    text-align: center;
+    width: 350px;
+    margin-left: 38%;
+    margin-top: 100px;
+}
+
+.country select {
+    border: 3px solid #fd79a8;
+    display: block;
+    width: 350px;
+}
+
+.block {
+    width: 100%;
+}
+
+#expected-text {
+    display: none;
+}
+
+.Username {
+  color: #fd79a8;
+  font-size: 25px;
+  display: inline-block;
+  padding-top: 37px;
+  padding-left: 35px;
+}
+
+.logout {
+  color: violet;
+}
+
+.commentsform {
+  padding: 35px;
+  width: 25%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.comments {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.comments h2 {
+  padding-bottom: 35px;
+}
+
+.comment {
+  width: 350px;
+  height: auto;
+  padding: 25px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.3);
+  border: 2px solid #fd79a8;
+}
+
+.comment h3 {
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+
+
+#logincont h3{
+  padding-bottom: 10px;
+}
+
+#logincont h3 a{
+  font-size: 13px;
+}
+
+.signupform {
+  margin: 0 auto;
+  margin-top: 55px;
+  display: block;
+  background-color: #fafafa;
+  width: 350px;
+  text-align: center;
+  padding: 35px;
+}
+
+.signupform h1 {
+  padding-bottom: 15px;
+}
+
+.signupform input[type='submit'] {
+  margin-top: 15px;
+}
+
+.selectform {
+  padding: 35px;
+}
+
+.selectform select{
+  width: 260px;
+}
+
+
+aside {
+  width: 400px;
+  position: absolute;
+  top: 25%;
+  right: 3%;
+  background-color: #FFEBCD;
+  padding: 15px;
+  border-radius: 11px;
+  border: 3px solid #fd79a8;
+}
+
+#asidecont {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -53;
+}
+
+#country-selection {
+  background-color: white;
+}
+
+.lifeof {
+  color: #3498db;
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.lifeoftitle {
+  color: #3498db;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+}
+
+body{
+  background-color: #fafafa;
+  margin-top: 0px;
+}
+
+.explain {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 35px;
+}
+
+input[type='date']{
+  border: 3px solid #fd79a8;
+  display: block;
+  width: 260px;
+  height: 45px;
+  background-color: white;
+  padding: 15px;
+}
+
+
+@media (max-width: 500px){
+  .commentsform {
+    width: 90%;
+  }
+  .country {
+    margin-left: 1.5%;
+    margin-top: 50px;
+  }
+  .Username {
+    display: none;
+  }
+  .years {
+    width: 241px;
+    margin-bottom: 100px!important; 
+  }
+}
+
+.close-popup {
+  background: rgba(0,0,0,.2);
+  cursor: default;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 5;
+  visibility: hidden;
+  /* "delay" the visibility transition */
+  -webkit-transition: opacity .5s, visibility 0s;
+  transition: opacity .5s, visibility 0s;
+}
+
+#popup1 {
+  width: 300px;
+  text-align: center;
+  height: 150px;
+  position: fixed;
+  top: 50%;
+  opacity: 0;
+  visibility: hidden;
+  left: calc(50% - 75px);
+  padding: 25px;
+  padding-top: 35px;
+  border-radius: 0px 15px 15px 15px;
+  max-height: 150px;
+  background-color: white;
+  color: black;
+  z-index: 7;
+  box-shadow: 0px 3px 2px 2px rgba(0,0,0,0.45);
+}
+
+
+.reveal {
+  opacity: 1!important;
+  visibility: visible!important;
+  transition: linear 0s, opacity .5s, visibility 0s;
+}
+
+.rotate{
+  transform: rotate(90deg);  
+  margin-left: 30px;
+}
+
+
+.stages {
+  display: none;
+  height: 1995px;
+  width: 10px;
+  background-color: blue;
+  position: absolute;
+  left: 250px;
+}
+
+@media (max-width: 1450px){
+  .stages {left: 12%;}
+}
+
+@media (max-width: 1350px){
+  .stages {left: 10%;}
+}
+
+@media (max-width: 1280px){
+  .stages {left: 8%;}
+}
+
+@media (max-width: 1230px){
+  .stages {left: 6%;}
+}
+
+@media (max-width: 1170px){
+  .stages {left: 4%;}
+}
+
+@media (max-width: 1120px){
+  .stages {left: 2%;}
+}
+
+@media (max-width: 1076px){
+  .stages {display: none;}
+}
+
+.stages div{
+  width: 10px;
+  display: inline-block;
+}
+
+.stages div span {
+  padding-left: 42%;
+  line-height: 65px;
+}
+
+.tooyoung {
+  height: 25%;
+  background-color: #fd79a8;
+  color: #fd79a8;
+}
+
+.young {
+  height: 20%;
+  background-color: green;
+  color: green;
+}
+
+.mature {
+  height: 15% ;
+  background-color: orange;
+  color: orange;
+}
+
+.old {
+  height: 40%;
+  background-color: grey;
+  color: grey;
+}
+
+#eventform {
+  width: 15%;
+  padding: 15px;
+  position: absolute;
+  left: 5%;
+}
+
+#eventform input[type='submit'] {
+  width: 100%!important;
+}
+
+
+#addevent {
+  padding: 5px;
+  color: white;
+  height: 50px;
+  border-radius: 10px;
+  position: fixed;
+  left: 3%;
+  top: 15%;  
+  box-shadow: 0px 1px 2px 2px rgba(0,0,0,0.45);
+}
+
+#addevent a {
+  color: white;
+  text-decoration: none;
+}
+
+#addeventform {
+  width: 40%;
+  padding: 35px;
+}
+
+#addeventform fieldset {
+  padding: 35px;
+}
